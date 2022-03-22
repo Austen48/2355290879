@@ -1,0 +1,509 @@
+senshado_decisions = {
+	debug_hyper_event_active = {
+		visible = {
+			is_debug = yes
+		}
+		days_re_enable = 1
+		complete_effect = {
+			set_country_flag = open_hyper_event
+			play_song = "extra_erika"
+		}
+	}
+
+	debug_hyper_event_close = {
+		visible = {
+			is_debug = yes
+		}
+		days_re_enable = 1
+		complete_effect = {
+			clr_country_flag = open_hyper_event
+		}
+	}
+
+	debug_free_300_ssdp_points = {
+		visible = {
+			is_debug = yes
+		}
+		days_re_enable = 1
+		complete_effect = {
+			army_experience = 100
+			add_ssdp_300 = yes
+		}
+	}
+
+	debug_clear_ssdp_points = {
+		visible = {
+			is_debug = yes
+		}
+		days_re_enable = 1
+		complete_effect = {
+			clear_ssdp = yes
+		}
+	}
+	
+	debug_clear_affinity = {
+		visible = {
+			is_debug = yes
+		}
+		days_re_enable = 1
+		complete_effect = {
+			clear_variable = affinity_1
+			clear_variable = affinity_2
+			clear_variable = affinity_3
+		}
+	}
+
+	debug_senshado_test = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			add_goods = yes
+		}
+	}
+
+	debug_add_senshado_school = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			random_state = {
+				limit = { is_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = senshado_school
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	buy_political_points = {
+		days_re_enable = 30
+		custom_cost_trigger = { check_variable = { ssdp > 299.9 } }
+		custom_cost_text = generic_decision_tooltip_1
+		days_remove = 20
+		complete_effect = {
+			add_to_variable = {
+				var = ssdp
+				value = -300
+			}
+		}
+		remove_effect = {
+			add_political_power = 100
+		}
+	}
+
+	invest_gold_ore_mining = {
+		days_re_enable = 1
+		custom_cost_trigger = { check_variable = { gold > 39.9 } }
+		custom_cost_text = generic_decision_tooltip_2
+		days_remove = 200
+		complete_effect = {
+			add_to_variable = {
+				var = gold
+				value = -40
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			if = { 
+				limit = { has_tech = excavation5 }
+				add_to_variable = {
+					gold = 50
+				}
+				custom_effect_tooltip = generic_decision_tooltip_3
+			}
+			else_if = {
+				limit = { has_tech = excavation4 }
+				add_to_variable = {
+					gold = 40
+				}
+				custom_effect_tooltip = generic_decision_tooltip_4
+			}
+			else_if = {
+				limit = { has_tech = excavation3 }
+				add_to_variable = {
+					gold = 30
+				}
+				custom_effect_tooltip = generic_decision_tooltip_5
+			}
+			else_if = {
+				limit = { has_tech = excavation2 }
+				add_to_variable = {
+					gold = 20
+				}
+				custom_effect_tooltip = generic_decision_tooltip_6
+			}
+			else_if = {
+				limit = { has_tech = excavation1 }
+				add_to_variable = {
+					gold = 10
+				}
+				custom_effect_tooltip = generic_decision_tooltip_7
+			}
+			else = {
+				custom_effect_tooltip = generic_decision_tooltip_8
+			}
+			add_to_variable = {
+				gold = 100
+			}
+		}
+	}
+
+	recruit_army_character = {
+		days_re_enable = 30
+		custom_cost_trigger = { check_variable = { ssdp > 299.9 } }
+		custom_cost_text = generic_decision_tooltip_1
+		complete_effect = {
+			random_list = {
+				2 = {
+					if = { 
+						limit = { OR = { has_unit_leader = 1021 has_unit_leader = 1000 } }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { OR = { has_unit_leader = 1021 has_unit_leader = 1000 }} }
+						create_field_marshal = {
+							name = "Miho Nishizumi"
+							id = 1000
+							picture = "Portrait_generic_Miho.dds"
+							traits = { Brilliant_Strategist Armor_Officer Panzer_Expert	}
+							skill = 4
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 5
+							logistics_skill = 4
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				2 = {
+					if = { 
+						limit = { has_unit_leader = 1001 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1001 } }
+						create_field_marshal = {
+							name = "Alice Shimada"
+							id = 1001
+							picture = "Portrait_generic_Alice.dds"
+							traits = { Offensive_Doctrine Armor_Officer Panzer_Expert}
+							skill = 4
+							attack_skill = 5
+							defense_skill = 4
+							planning_skill = 3
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				4 = {
+					if = { 
+						limit = { has_unit_leader = 1002 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1002 } }
+						create_corps_commander = {
+							name = "Yukari Akiyama"
+							id = 1002
+							picture = "Portrait_generic_Yukari.dds"
+							traits = { Armor_Officer Bearer_of_Artillery }
+							skill = 3
+							attack_skill = 4
+							defense_skill = 3
+							planning_skill = 4
+							logistics_skill = 2
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				4 = {
+					if = { 
+						limit = { has_unit_leader = 1003 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1003 } }
+						create_corps_commander = {
+							name = "Saori Takebe"
+							id = 1003
+							picture = "Portrait_generic_Saori.dds"
+							traits = { Armor_Officer Media_Personality }
+							skill = 3
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 4
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				4 = {
+					if = { 
+						limit = { has_unit_leader = 1004 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1004 } }
+						create_corps_commander = {
+							name = "Hana Isuzu"
+							id = 1004
+							picture = "Portrait_generic_Hana.dds"
+							traits = { Armor_Officer }
+							skill = 3
+							attack_skill = 4
+							defense_skill = 3
+							planning_skill = 3
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				4 = {
+					if = { 
+						limit = { has_unit_leader = 1005 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1005 } }
+						create_corps_commander = {
+							name = "Mako Reizei"
+							id = 1005
+							picture = "Portrait_generic_Mako.dds"
+							traits = { Armor_Officer }
+							skill = 3
+							attack_skill = 2
+							defense_skill = 4
+							planning_skill = 3
+							logistics_skill = 4
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1028 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1028 } }
+						create_corps_commander = {
+							name = "Azumi"
+							id = 1028
+							picture = "Portrait_generic_Azumi.dds"
+							traits = { Armor_Officer War_Hero}
+							skill = 3
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 4
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1029 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1029 } }
+						create_corps_commander = {
+							name = "Megumi"
+							id = 1029
+							picture = "Portrait_generic_Megumi.dds"
+							traits = { Armor_Officer War_Hero}
+							skill = 3
+							attack_skill = 4
+							defense_skill = 3
+							planning_skill = 3
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1030 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1030 } }
+						create_corps_commander = {
+							name = "Rumi"
+							id = 1030
+							picture = "Portrait_generic_Rumi.dds"
+							traits = { Armor_Officer War_Hero}
+							skill = 3
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 3
+							logistics_skill = 4
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1025 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1025 } }
+						create_corps_commander = {
+							name = "Anzu Kadotani"
+							id = 1025
+							picture = "Portrait_generic_Anzu.dds"
+							traits = { Armor_Officer Organizer}
+							skill = 3
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 4
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1026 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1026 } }
+						create_corps_commander = {
+							name = "Momo Kawashima"
+							id = 1026
+							picture = "Portrait_generic_Momo.dds"
+							traits = { Armor_Officer Organizer}
+							skill = 3
+							attack_skill = 4
+							defense_skill = 4
+							planning_skill = 3
+							logistics_skill = 2
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1027 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1027 } }
+						create_corps_commander = {
+							name = "Yuzu Koyama"
+							id = 1027
+							picture = "Portrait_generic_Yuzu.dds"
+							traits = { Armor_Officer Organizer}
+							skill = 3
+							attack_skill = 2
+							defense_skill = 4
+							planning_skill = 3
+							logistics_skill = 4
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1031 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1031 } }
+						create_corps_commander = {
+							name = "Reira Nakajima"
+							id = 1031
+							picture = "Portrait_generic_Reira.dds"
+							traits = { Armor_Officer }
+							skill = 3
+							attack_skill = 4
+							defense_skill = 3
+							planning_skill = 3
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1032 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1032 } }
+						create_corps_commander = {
+							name = "Keiko Hoshino"
+							id = 1032
+							picture = "Portrait_generic_Keiko.dds"
+							traits = { Armor_Officer }
+							skill = 3
+							attack_skill = 3
+							defense_skill = 4
+							planning_skill = 3
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1033 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1033 } }
+						create_corps_commander = {
+							name = "Maria Suzuki"
+							id = 1033
+							picture = "Portrait_generic_Maria.dds"
+							traits = { Armor_Officer }
+							skill = 3
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 4
+							logistics_skill = 3
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1034 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					if = {
+						limit = { NOT = { has_unit_leader = 1034 } }
+						create_corps_commander = {
+							name = "Muuton Tsuchiya"
+							id = 1034
+							picture = "Portrait_generic_Muuton.dds"
+							traits = { Armor_Officer }
+							skill = 3
+							attack_skill = 3
+							defense_skill = 3
+							planning_skill = 3
+							logistics_skill = 4
+						}
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+			}
+			add_to_variable = {
+				var = ssdp
+				value = -300
+			}
+			
+		}
+	}
+}

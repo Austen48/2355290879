@@ -1,0 +1,22 @@
+senshado_decisions = {
+	icon = GFX_decision_category_senshado
+	allowed = {
+	}
+}
+
+cauldron_tankathlon_tournament = {
+	icon = GFX_decision_category_senshado
+	available = {
+		
+	}
+	allowed = {
+
+	}
+}
+
+debug_decisions = {
+	icon = generic_research
+	visible = {
+		is_debug = yes
+	}
+}

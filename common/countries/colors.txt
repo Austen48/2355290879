@@ -1,0 +1,161 @@
+#reload countrycolors
+
+KGA = {
+	color = rgb { 194 54 122 }
+	color_ui = rgb { 194 54 122 }
+}
+
+BCF = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 100 149 237 }
+}
+
+BON = {
+	color = rgb { 163 129 26 }
+	color_ui = rgb { 163 129 26 }
+}
+
+ANZ = {
+	color = rgb { 140 117 214 }
+	color_ui = rgb { 140 117 214 }
+}
+
+PRA = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 125 13 24 }
+}
+
+GBT = {
+	color = rgb { 98 0 0 }
+	color_ui = rgb { 98 0 0 }
+}
+
+SDS = {
+	color = rgb { 197 237 67 }
+	color_ui = rgb { 197 237 67 }
+}
+
+STG = {
+	color = rgb { 2 97 71 }
+	color_ui = rgb { 2 97 71 }
+}
+
+CHT = {
+	color = rgb { 255 150 51 }
+	color_ui = rgb { 255 150 51 }
+}
+
+JHS = {
+	color = rgb { 114 95 150 }
+	color_ui = rgb { 114 95 150 }
+}
+
+BDH = {
+	color = rgb { 117 80 90 }
+	color_ui = rgb { 117 80 90 }
+}
+
+ASU = {
+	color = rgb { 0 101 168 }
+	color_ui = rgb { 0 101 168 }
+}
+
+COU = {
+	color = rgb { 65 97 28 }
+	color_ui = rgb { 65 97 28 }
+}
+
+GHS = {
+	color = rgb { 0 16 197 }
+	color_ui = rgb { 0 16 197 }
+}
+
+KFA = {
+	color = rgb { 168 160 8 }
+	color_ui = rgb { 168 160 8 }
+}
+
+MAP = {
+	color = rgb { 242 166 94 }
+	color_ui = rgb { 242 166 94 }
+}
+
+THS = {
+	color = rgb { 15 148 123 }
+	color_ui = rgb { 15 148 123 }
+}
+
+VIG = {
+	color = rgb { 55 192 92 }
+	color_ui = rgb { 55 192 92 }
+}
+
+VIK = {
+	color = rgb { 111 71 71 }
+	color_ui = rgb { 111 71 71 }
+}
+
+WAF = {
+	color = rgb { 255 215 0 }
+	color_ui = rgb { 255 215 0 }
+}
+
+YOG = {
+	color = rgb { 93 193 201 }
+	color_ui = rgb { 93 193 201 }
+}
+
+KEB = {
+	color = rgb { 199 129 54 }
+	color_ui = rgb { 199 129 54 }
+}
+
+MGC = {
+	color = rgb { 255 153 51  }
+	color_ui = rgb { 255 153 51  }
+}
+
+ORA = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+ORA = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+ODU = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+OHI = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+OTU = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+OAN = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+OLE = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+OSH = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}
+
+BKC = {
+	color = rgb { 212 212 212 }
+	color_ui = rgb { 212 212 212 }
+}

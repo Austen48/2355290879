@@ -1,0 +1,43 @@
+﻿add_namespace = senshado_events
+#欢迎游玩mod
+country_event = {
+	id = senshado_events.1
+	title = senshado_events.1.t
+	desc = senshado_events.1.d
+	picture = GFX_event_senshado_welcome
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = senshado_events.1.c1
+	}
+}
+#将领重复招募
+country_event = {
+	id = senshado_events.3
+	title = senshado_events.3.t
+	desc = senshado_events.3.d
+	picture = GFX_event_senshado_recruit
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = senshado_events.3.a
+		army_experience = 15
+		air_experience = 5
+		add_manpower = 10000
+	}
+}
+#将领招募成功
+country_event = {
+	id = senshado_events.2
+	title = senshado_events.2.t
+	desc = senshado_events.2.d
+	picture = GFX_event_senshado_recruit
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = senshado_events.2.a
+	}
+}

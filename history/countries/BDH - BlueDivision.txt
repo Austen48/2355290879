@@ -1,0 +1,26 @@
+﻿capital = 41
+
+set_technology = {
+	senshado_prototype_tank = 1
+	senshado_light_tank_1 = 1
+}
+set_research_slots = 5
+set_convoys = 20
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 77
+	communism = 22
+	neutrality = 1
+}
+
+recruit_character = BDH_EI
+
+
+

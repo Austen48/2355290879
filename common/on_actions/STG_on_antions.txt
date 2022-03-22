@@ -1,0 +1,9 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            STG = {
+				set_country_flag = STG_START_OCCUPATION
+            }
+        }
+    }
+}

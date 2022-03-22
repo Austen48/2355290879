@@ -1,0 +1,47 @@
+﻿capital = 282
+
+set_technology = {
+	senshado_prototype_tank = 1
+	senshado_light_tank_1 = 1
+}
+set_research_slots = 5
+set_convoys = 20
+
+add_ideas = CHT_losers_ambition
+add_ideas = CHT_prewar_economic_system
+add_ideas = CHT_new_bakufu_revolution
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 25
+	neutrality = 25
+}
+
+create_country_leader = {
+	name = "Kinuyo Nishi"
+	desc = ""
+	picture = "Portrait_CHT_Nishi.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Shizuka Tsuruki"
+	desc = ""
+	picture = "Portrait_CHT_Tsuruki.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+

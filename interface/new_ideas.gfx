@@ -1,0 +1,179 @@
+spriteTypes = {	
+	######################################
+	###############GENERIC################
+	######################################
+	spriteType = {
+		name = "GFX_idea_gold_storage_epic"
+		texturefile = "gfx/interface/ideas/idea_gold_storage_epic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gold_storage_great"
+		texturefile = "gfx/interface/ideas/idea_gold_storage_great.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gold_storage_good"
+		texturefile = "gfx/interface/ideas/idea_gold_storage_good.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gold_storage_avergae"
+		texturefile = "gfx/interface/ideas/idea_gold_storage_avergae.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gold_storage_low"
+		texturefile = "gfx/interface/ideas/idea_gold_storage_low.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gold_storage_poor"
+		texturefile = "gfx/interface/ideas/idea_gold_storage_poor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gold_storage_bad"
+		texturefile = "gfx/interface/ideas/idea_gold_storage_bad.dds"
+	}
+
+	######################################
+	###############Ooarai#################
+	######################################
+	spriteType = {
+		name = "GFX_idea_Ooarai_remnant"
+		texturefile = "gfx/interface/ideas/idea_Ooarai_remnant.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Anteater"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Anteater.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Duck"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Duck.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Hippo"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Hippo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Leopon"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Leopon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Mallard"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Mallard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Rabbit"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Rabbit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Shark"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Shark.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ooari_Turtle"
+		texturefile = "gfx/interface/ideas/idea_Ooari_Turtle.dds"
+	}
+
+
+	######################################
+	##################BON#################
+	######################################
+	spriteType = {
+		name = "GFX_idea_POL_purchase_from_st_gloriana"
+		texturefile = "gfx/interface/ideas/idea_POL_purchase_from_st_gloriana.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_final_tech_contract"
+		texturefile = "gfx/interface/ideas/idea_POL_final_tech_contract.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_armor_first"
+		texturefile = "gfx/interface/ideas/idea_POL_armor_first.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_over_production"
+		texturefile = "gfx/interface/ideas/idea_POL_over_production.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_start_of_new_lane"
+		texturefile = "gfx/interface/ideas/idea_POL_start_of_new_lane.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_traditional_cavalry"
+		texturefile = "gfx/interface/ideas/idea_POL_traditional_cavalry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_exchange_student"
+		texturefile = "gfx/interface/ideas/idea_POL_exchange_student.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_prepare_for_tankathlon"
+		texturefile = "gfx/interface/ideas/idea_POL_prepare_for_tankathlon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_tankathlon_spirit"
+		texturefile = "gfx/interface/ideas/idea_POL_tankathlon_spirit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_cuisine"
+		texturefile = "gfx/interface/ideas/idea_POL_cuisine.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_tiny_senshado"
+		texturefile = "gfx/interface/ideas/idea_POL_tiny_senshado.dds"
+	}
+	
+	######################################
+	##################KGA#################
+	######################################
+	spriteType = {
+		name = "GFX_idea_KGA_maho"
+		texturefile = "gfx/interface/advisors/idea_maho.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_miho"
+		texturefile = "gfx/interface/advisors/idea_miho.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_koume"
+		texturefile = "gfx/interface/advisors/idea_koume.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_mauko"
+		texturefile = "gfx/interface/advisors/idea_mauko.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_erika"
+		texturefile = "gfx/interface/advisors/idea_erika.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_emi"
+		texturefile = "gfx/interface/advisors/idea_emi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_ritaiko"
+		texturefile = "gfx/interface/advisors/idea_ritaiko.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_geshiko"
+		texturefile = "gfx/interface/advisors/idea_geshiko.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_takami"
+		texturefile = "gfx/interface/advisors/idea_takami.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_sangou"
+		texturefile = "gfx/interface/advisors/idea_sangou.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_sheska"
+		texturefile = "gfx/interface/advisors/idea_sheska.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_kita"
+		texturefile = "gfx/interface/advisors/idea_kita.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KGA_hitomi"
+		texturefile = "gfx/interface/advisors/idea_hitomi.dds"
+	}
+
+}

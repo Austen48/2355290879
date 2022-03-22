@@ -1,0 +1,323 @@
+#################################
+#决定商店内商品的图标和描述替换内容#
+#################################
+
+####################
+#决定了商品的六个图标#
+####################
+defined_text = {
+	name = goods_1f
+	text = { trigger = { check_variable = { slot1_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot1_good = 1 } } localization_key = item_random }
+    text = { trigger = { check_variable = { slot1_good = 2 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot1_good = 3 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot1_good = 4 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot1_good = 5 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot1_good = 6 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot1_good = 7 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot1_good = 8 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot1_good = 9 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot1_good = 10 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot1_good = 11 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot1_good = 12 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot1_good = 13 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot1_good = 14 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot1_good = 15 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot1_good = 16 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot1_good = 17 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot1_good = 18 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot1_good = 19 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot1_good = 20 } } localization_key = item_random }
+	#默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_2f
+	text = { trigger = { check_variable = { slot2_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot2_good = 1 } } localization_key = item_random }
+    text = { trigger = { check_variable = { slot2_good = 2 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot2_good = 3 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot2_good = 4 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot2_good = 5 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot2_good = 6 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot2_good = 7 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot2_good = 8 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot2_good = 9 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot2_good = 10 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot2_good = 11 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot2_good = 12 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot2_good = 13 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot2_good = 14 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot2_good = 15 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot2_good = 16 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot2_good = 17 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot2_good = 18 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot2_good = 19 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot2_good = 20 } } localization_key = item_random }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_3f
+	text = { trigger = { check_variable = { slot3_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot3_good = 1 } } localization_key = item_random }
+    text = { trigger = { check_variable = { slot3_good = 2 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot3_good = 3 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot3_good = 4 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot3_good = 5 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot3_good = 6 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot3_good = 7 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot3_good = 8 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot3_good = 9 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot3_good = 10 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot3_good = 11 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot3_good = 12 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot3_good = 13 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot3_good = 14 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot3_good = 15 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot3_good = 16 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot3_good = 17 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot3_good = 18 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot3_good = 19 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot3_good = 20 } } localization_key = item_random }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_4f
+	text = { trigger = { check_variable = { slot4_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot4_good = 1 } } localization_key = item_random }
+    text = { trigger = { check_variable = { slot4_good = 2 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot4_good = 3 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot4_good = 4 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot4_good = 5 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot4_good = 6 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot4_good = 7 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot4_good = 8 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot4_good = 9 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot4_good = 10 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot4_good = 11 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot4_good = 12 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot4_good = 13 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot4_good = 14 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot4_good = 15 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot4_good = 16 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot4_good = 17 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot4_good = 18 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot4_good = 19 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot4_good = 20 } } localization_key = item_random }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_5f
+	text = { trigger = { check_variable = { slot5_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot5_good = 1 } } localization_key = item_random }
+    text = { trigger = { check_variable = { slot5_good = 2 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot5_good = 3 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot5_good = 4 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot5_good = 5 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot5_good = 6 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot5_good = 7 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot5_good = 8 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot5_good = 9 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot5_good = 10 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot5_good = 11 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot5_good = 12 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot5_good = 13 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot5_good = 14 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot5_good = 15 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot5_good = 16 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot5_good = 17 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot5_good = 18 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot5_good = 19 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot5_good = 20 } } localization_key = item_random }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_6f
+	text = { trigger = { check_variable = { slot6_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot6_good = 1 } } localization_key = item_random }
+    text = { trigger = { check_variable = { slot6_good = 2 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot6_good = 3 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot6_good = 4 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot6_good = 5 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot6_good = 6 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot6_good = 7 } } localization_key = item_present }
+	text = { trigger = { check_variable = { slot6_good = 8 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot6_good = 9 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot6_good = 10 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot6_good = 11 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot6_good = 12 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot6_good = 13 } } localization_key = item_tank }
+	text = { trigger = { check_variable = { slot6_good = 14 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot6_good = 15 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot6_good = 16 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot6_good = 17 } } localization_key = item_support }
+	text = { trigger = { check_variable = { slot6_good = 18 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot6_good = 19 } } localization_key = item_random }
+	text = { trigger = { check_variable = { slot6_good = 20 } } localization_key = item_random }
+    #默认
+	text = { localization_key = none }
+}
+
+####################
+#决定了商品的六个描述#
+####################
+defined_text = {
+	name = goods_1d
+	text = { trigger = { check_variable = { slot1_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot1_good = 1 } } localization_key = good1.d }
+    text = { trigger = { check_variable = { slot1_good = 2 } } localization_key = good2.d }
+	text = { trigger = { check_variable = { slot1_good = 3 } } localization_key = good3.d }
+	text = { trigger = { check_variable = { slot1_good = 4 } } localization_key = good4.d }
+	text = { trigger = { check_variable = { slot1_good = 5 } } localization_key = good5.d }
+	text = { trigger = { check_variable = { slot1_good = 6 } } localization_key = good6.d }
+	text = { trigger = { check_variable = { slot1_good = 7 } } localization_key = good7.d }
+	text = { trigger = { check_variable = { slot1_good = 8 } } localization_key = good8.d }
+	text = { trigger = { check_variable = { slot1_good = 9 } } localization_key = good9.d }
+	text = { trigger = { check_variable = { slot1_good = 10 } } localization_key = good10.d }
+	text = { trigger = { check_variable = { slot1_good = 11 } } localization_key = good11.d }
+	text = { trigger = { check_variable = { slot1_good = 12 } } localization_key = good12.d }
+	text = { trigger = { check_variable = { slot1_good = 13 } } localization_key = good13.d }
+	text = { trigger = { check_variable = { slot1_good = 14 } } localization_key = good14.d }
+	text = { trigger = { check_variable = { slot1_good = 15 } } localization_key = good15.d }
+	text = { trigger = { check_variable = { slot1_good = 16 } } localization_key = good16.d }
+	text = { trigger = { check_variable = { slot1_good = 17 } } localization_key = good17.d }
+	text = { trigger = { check_variable = { slot1_good = 18 } } localization_key = good18.d }
+	text = { trigger = { check_variable = { slot1_good = 19 } } localization_key = good19.d }
+	text = { trigger = { check_variable = { slot1_good = 20 } } localization_key = good20.d }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_2d
+	text = { trigger = { check_variable = { slot2_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot2_good = 1 } } localization_key = good1.d }
+    text = { trigger = { check_variable = { slot2_good = 2 } } localization_key = good2.d }
+	text = { trigger = { check_variable = { slot2_good = 3 } } localization_key = good3.d }
+	text = { trigger = { check_variable = { slot2_good = 4 } } localization_key = good4.d }
+	text = { trigger = { check_variable = { slot2_good = 5 } } localization_key = good5.d }
+	text = { trigger = { check_variable = { slot2_good = 6 } } localization_key = good6.d }
+	text = { trigger = { check_variable = { slot2_good = 7 } } localization_key = good7.d }
+	text = { trigger = { check_variable = { slot2_good = 8 } } localization_key = good8.d }
+	text = { trigger = { check_variable = { slot2_good = 9 } } localization_key = good9.d }
+	text = { trigger = { check_variable = { slot2_good = 10 } } localization_key = good10.d }
+	text = { trigger = { check_variable = { slot2_good = 11 } } localization_key = good11.d }
+	text = { trigger = { check_variable = { slot2_good = 12 } } localization_key = good12.d }
+	text = { trigger = { check_variable = { slot2_good = 13 } } localization_key = good13.d }
+	text = { trigger = { check_variable = { slot2_good = 14 } } localization_key = good14.d }
+	text = { trigger = { check_variable = { slot2_good = 15 } } localization_key = good15.d }
+	text = { trigger = { check_variable = { slot2_good = 16 } } localization_key = good16.d }
+	text = { trigger = { check_variable = { slot2_good = 17 } } localization_key = good17.d }
+	text = { trigger = { check_variable = { slot2_good = 18 } } localization_key = good18.d }
+	text = { trigger = { check_variable = { slot2_good = 19 } } localization_key = good19.d }
+	text = { trigger = { check_variable = { slot2_good = 20 } } localization_key = good20.d }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_3d
+	text = { trigger = { check_variable = { slot3_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot3_good = 1 } } localization_key = good1.d }
+    text = { trigger = { check_variable = { slot3_good = 2 } } localization_key = good2.d }
+	text = { trigger = { check_variable = { slot3_good = 3 } } localization_key = good3.d }
+	text = { trigger = { check_variable = { slot3_good = 4 } } localization_key = good4.d }
+	text = { trigger = { check_variable = { slot3_good = 5 } } localization_key = good5.d }
+	text = { trigger = { check_variable = { slot3_good = 6 } } localization_key = good6.d }
+	text = { trigger = { check_variable = { slot3_good = 7 } } localization_key = good7.d }
+	text = { trigger = { check_variable = { slot3_good = 8 } } localization_key = good8.d }
+	text = { trigger = { check_variable = { slot3_good = 9 } } localization_key = good9.d }
+	text = { trigger = { check_variable = { slot3_good = 10 } } localization_key = good10.d }
+	text = { trigger = { check_variable = { slot3_good = 11 } } localization_key = good11.d }
+	text = { trigger = { check_variable = { slot3_good = 12 } } localization_key = good12.d }
+	text = { trigger = { check_variable = { slot3_good = 13 } } localization_key = good13.d }
+	text = { trigger = { check_variable = { slot3_good = 14 } } localization_key = good14.d }
+	text = { trigger = { check_variable = { slot3_good = 15 } } localization_key = good15.d }
+	text = { trigger = { check_variable = { slot3_good = 16 } } localization_key = good16.d }
+	text = { trigger = { check_variable = { slot3_good = 17 } } localization_key = good17.d }
+	text = { trigger = { check_variable = { slot3_good = 18 } } localization_key = good18.d }
+	text = { trigger = { check_variable = { slot3_good = 19 } } localization_key = good19.d }
+	text = { trigger = { check_variable = { slot3_good = 20 } } localization_key = good20.d }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_4d
+	text = { trigger = { check_variable = { slot4_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot4_good = 1 } } localization_key = good1.d }
+    text = { trigger = { check_variable = { slot4_good = 2 } } localization_key = good2.d }
+	text = { trigger = { check_variable = { slot4_good = 3 } } localization_key = good3.d }
+	text = { trigger = { check_variable = { slot4_good = 4 } } localization_key = good4.d }
+	text = { trigger = { check_variable = { slot4_good = 5 } } localization_key = good5.d }
+	text = { trigger = { check_variable = { slot4_good = 6 } } localization_key = good6.d }
+	text = { trigger = { check_variable = { slot4_good = 7 } } localization_key = good7.d }
+	text = { trigger = { check_variable = { slot4_good = 8 } } localization_key = good8.d }
+	text = { trigger = { check_variable = { slot4_good = 9 } } localization_key = good9.d }
+	text = { trigger = { check_variable = { slot4_good = 10 } } localization_key = good10.d }
+	text = { trigger = { check_variable = { slot4_good = 11 } } localization_key = good11.d }
+	text = { trigger = { check_variable = { slot4_good = 12 } } localization_key = good12.d }
+	text = { trigger = { check_variable = { slot4_good = 13 } } localization_key = good13.d }
+	text = { trigger = { check_variable = { slot4_good = 14 } } localization_key = good14.d }
+	text = { trigger = { check_variable = { slot4_good = 15 } } localization_key = good15.d }
+	text = { trigger = { check_variable = { slot4_good = 16 } } localization_key = good16.d }
+	text = { trigger = { check_variable = { slot4_good = 17 } } localization_key = good17.d }
+	text = { trigger = { check_variable = { slot4_good = 18 } } localization_key = good18.d }
+	text = { trigger = { check_variable = { slot4_good = 19 } } localization_key = good19.d }
+	text = { trigger = { check_variable = { slot4_good = 20 } } localization_key = good20.d }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_5d
+	text = { trigger = { check_variable = { slot5_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot5_good = 1 } } localization_key = good1.d }
+    text = { trigger = { check_variable = { slot5_good = 2 } } localization_key = good2.d }
+	text = { trigger = { check_variable = { slot5_good = 3 } } localization_key = good3.d }
+	text = { trigger = { check_variable = { slot5_good = 4 } } localization_key = good4.d }
+	text = { trigger = { check_variable = { slot5_good = 5 } } localization_key = good5.d }
+	text = { trigger = { check_variable = { slot5_good = 6 } } localization_key = good6.d }
+	text = { trigger = { check_variable = { slot5_good = 7 } } localization_key = good7.d }
+	text = { trigger = { check_variable = { slot5_good = 8 } } localization_key = good8.d }
+	text = { trigger = { check_variable = { slot5_good = 9 } } localization_key = good9.d }
+	text = { trigger = { check_variable = { slot5_good = 10 } } localization_key = good10.d }
+	text = { trigger = { check_variable = { slot5_good = 11 } } localization_key = good11.d }
+	text = { trigger = { check_variable = { slot5_good = 12 } } localization_key = good12.d }
+	text = { trigger = { check_variable = { slot5_good = 13 } } localization_key = good13.d }
+	text = { trigger = { check_variable = { slot5_good = 14 } } localization_key = good14.d }
+	text = { trigger = { check_variable = { slot5_good = 15 } } localization_key = good15.d }
+	text = { trigger = { check_variable = { slot5_good = 16 } } localization_key = good16.d }
+	text = { trigger = { check_variable = { slot5_good = 17 } } localization_key = good17.d }
+	text = { trigger = { check_variable = { slot5_good = 18 } } localization_key = good18.d }
+	text = { trigger = { check_variable = { slot5_good = 19 } } localization_key = good19.d }
+	text = { trigger = { check_variable = { slot5_good = 20 } } localization_key = good20.d }
+    #默认
+	text = { localization_key = none }
+}
+defined_text = {
+	name = goods_6d
+	text = { trigger = { check_variable = { slot6_good = 0 } } localization_key = none }
+	text = { trigger = { check_variable = { slot6_good = 1 } } localization_key = good1.d }
+    text = { trigger = { check_variable = { slot6_good = 2 } } localization_key = good2.d }
+	text = { trigger = { check_variable = { slot6_good = 3 } } localization_key = good3.d }
+	text = { trigger = { check_variable = { slot6_good = 4 } } localization_key = good4.d }
+	text = { trigger = { check_variable = { slot6_good = 5 } } localization_key = good5.d }
+	text = { trigger = { check_variable = { slot6_good = 6 } } localization_key = good6.d }
+	text = { trigger = { check_variable = { slot6_good = 7 } } localization_key = good7.d }
+	text = { trigger = { check_variable = { slot6_good = 8 } } localization_key = good8.d }
+	text = { trigger = { check_variable = { slot6_good = 9 } } localization_key = good9.d }
+	text = { trigger = { check_variable = { slot6_good = 10 } } localization_key = good10.d }
+	text = { trigger = { check_variable = { slot6_good = 11 } } localization_key = good11.d }
+	text = { trigger = { check_variable = { slot6_good = 12 } } localization_key = good12.d }
+	text = { trigger = { check_variable = { slot6_good = 13 } } localization_key = good13.d }
+	text = { trigger = { check_variable = { slot6_good = 14 } } localization_key = good14.d }
+	text = { trigger = { check_variable = { slot6_good = 15 } } localization_key = good15.d }
+	text = { trigger = { check_variable = { slot6_good = 16 } } localization_key = good16.d }
+	text = { trigger = { check_variable = { slot6_good = 17 } } localization_key = good17.d }
+	text = { trigger = { check_variable = { slot6_good = 18 } } localization_key = good18.d }
+	text = { trigger = { check_variable = { slot6_good = 19 } } localization_key = good19.d }
+	text = { trigger = { check_variable = { slot6_good = 20 } } localization_key = good20.d }
+    #默认
+	text = { localization_key = none }
+}

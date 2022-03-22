@@ -1,0 +1,114 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit={ is_ai=no }
+				country_event = { days = 0 id = senshado_events.1 }
+				#第一次开局刷新商店
+				add_goods = yes
+				#刷新一次军费支出
+				get_daily_wages = yes
+			}
+
+			every_country = {
+				set_variable = { ssdp = 0 }
+				refresh_gold_standard = yes
+			}
+
+			KGA = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 0.65 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			PRA = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 0.9 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			CHT = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 0.65 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			BON = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 1.3 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			BCF = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 1.1 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			JHS = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 0.85 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			STG = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 1.15 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			SDS = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 1.15 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			ANZ = {
+				set_temp_variable = { temp = gold_standard }
+				multiply_temp_variable = { temp = 1.05 }
+				set_variable = {
+					var = gold
+					value = temp
+				}
+			}
+			every_country = {
+				refresh_gold_storage_ideas = yes
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			#刷新每周黄金储备精神
+			adjust_ai_gold = yes
+			refresh_gold_standard_and_ideas = yes
+			#刷新计算税收的国家产值
+			get_industry_weights = yes
+		}
+	}
+	
+	on_daily = {
+		effect = {
+			#增加每日战车道点数
+			increase_ssdp_daily = yes
+			get_daily_wages = yes
+			#增加每日的税收
+			increase_gold_daily = yes
+		}
+	}
+}

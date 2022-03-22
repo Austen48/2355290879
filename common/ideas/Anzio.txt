@@ -1,0 +1,131 @@
+ideas = {
+	country = {
+		#落后的南部地区
+		ANZ_undeveloped_southern = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.15
+				production_speed_industrial_complex_factor = -0.15
+				repair_speed_factor = -0.15
+			}
+		}
+
+		#城市化趋势
+		ANZ_urbanization_trend = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				conscription_factor = -0.25
+				tax_daily_modifier = 0.05
+			}
+		}
+
+		#和共产主义勾结的天主教
+		ANZ_catholicism_collude_with_communism  = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				communism_drift = 0.01
+				democratic_drift = 0.01
+			}
+		}
+		
+		#出生率低迷
+		ANZ_low_birth_rate = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				recruitable_population = -0.3
+			}
+		}
+
+		#扩大意面出口
+		ANZ_export_more_pasta = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		#城市化趋势加速1
+		ANZ_urbanization_trend_enlarge_0 = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				production_speed_infrastructure_factor = 0.3
+				conscription_factor = -0.2
+				tax_daily_modifier = 0.1
+			}
+		}
+
+		#城市化趋势加速2
+		ANZ_urbanization_trend_enlarge_1 = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				production_speed_infrastructure_factor = 0.4
+				conscription_factor = -0.3
+				tax_daily_modifier = 0.15
+				stability_factor = -0.05
+			}
+		}
+
+		#重农经济
+		ANZ_agricultural_economy = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				monthly_population = 0.15
+				tax_daily_modifier = 0.15
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		#安齐奥民族阵线
+		ANZ_national_front = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+			    fascism_drift = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		#职业工团制度1
+		ANZ_occupational_community_system_0 = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		#职业工团制度2
+		ANZ_occupational_community_system_1 = {
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				stability_factor = -0.1
+				communism_drift = -0.03
+			}
+		}
+
+       #新文艺复兴
+	    ANZ_neo_renaissance ={
+			allowed = { tag = ANZ }
+			allowed_civil_war = { always = no }
+			modifier = {
+				war_support_factor = -0.2
+				stability_weekly_factor = 0.003
+				consumer_goods_factor = 0.05
+			}
+
+		}
+	}	
+}	

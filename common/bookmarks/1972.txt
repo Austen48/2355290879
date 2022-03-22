@@ -1,0 +1,136 @@
+bookmarks = {
+	bookmark = {
+		name = "1972_NAME"
+		desc = "1972_DESC"
+		date = 1972.9.6.12
+		picture = "GFX_select_date_1972"
+		default_country = "KGA"
+		default = yes
+	
+		KGA = {
+			history = KGA_1972_DESC
+			ideology = democratic
+			ideas={
+				KGA_broken_kuromorimine
+				KGA_nishizumi_family_origin
+				KGA_huge_debt
+			}
+			focuses = {
+				KGA_government_capital_intergration
+				KGA_deal_with_BC
+				KGA_atonement
+			}
+		}
+
+		BCF = {
+			history = BCF_1972_DESC
+			ideology = democratic
+			ideas={
+				BCF_chaotic_army
+				BCF_political_instability_1
+				BCF_faction_struggle_4
+				BCF_weak_government_4
+			}
+			focuses = {
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
+			}
+		}
+
+		ANZ = {
+			history = ANZ_1972_DESC
+			ideology = democratic
+			ideas={
+				ANZ_undeveloped_southern
+				ANZ_catholicism_collude_with_communism
+				ANZ_urbanization_trend
+			}
+			focuses = {
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
+			}
+		}
+
+		STG = {
+			history = STG_1972_DESC
+			ideology = democratic
+			ideas={
+				STG_cairns_economy_effect_0
+				STG_rise_of_the_labor_party
+				STG_decaying_senshado
+			}
+			focuses = {
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
+			}
+		}
+
+		CHT = {
+			history = CHT_1972_DESC
+			ideology = democratic
+			ideas={
+				CHT_losers_ambition
+ 				CHT_prewar_economic_system
+ 				CHT_new_bakufu_revolution
+			}
+			focuses = {
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
+			}
+		}
+
+		SDS = {
+			history = SDS_1972_DESC
+			ideology = democratic
+			ideas={
+				SDS_solid_bulwark_of_democratic_questionmark
+				SDS_severely_underpowered_army
+				SDS_quarantine_act
+			}
+			focuses = {
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
+			}
+		}
+
+		PRA = {
+			history = PRA_1972_DESC
+			ideology = democratic
+			ideas={
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
+			}
+		}
+
+		JHS = {
+			history = JHS_1972_DESC
+			ideology = democratic
+			ideas={
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_strengthen_government_support
+				FRA_arms_purchases_in_the_us
+				FRA_french_union
+			}
+		}
+
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

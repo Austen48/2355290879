@@ -1,0 +1,1133 @@
+focus_tree = {
+	id = ANZ_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ANZ
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+    #安齐奥天主教会
+	focus = {
+		id = ANZ_catholic_church
+		icon = GFX_focus_ANZ_catholic_church
+		x = 4
+		y = 0
+		cost = 10
+		available = { }
+		bypass = { }
+		prerequisite = { }
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ANZ_social_revolution }
+		completion_reward = {
+			add_stability = 0.1
+			#天主教的整顿
+			country_event = { id = Anzio.2 days = 0 }
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+	#新文艺复兴
+	focus = {
+		id = ANZ_neo_renaissance 
+		icon = GFX_focus_ANZ_neo_renaissance
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_catholic_church
+		available = { }
+		bypass = { }
+		prerequisite = { focus = ANZ_catholic_church }
+		available_if_capitulated = yes
+		completion_reward = {
+			#触发新文艺复兴事件组
+			country_event = { id = Anzio.3 days = 0 }
+			hidden_effect = { ANZ = { set_variable= { GFS = 0 } } }
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#历史性妥协
+	focus = {
+		id = ANZ_historic_compromise
+		icon = GFX_focus_ANZ_historic_compromise
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_neo_renaissance
+		available = { has_country_flag = ANZ_UNLOCK_HISTORY_COMPROMISE }
+		prerequisite = { focus = ANZ_neo_renaissance }
+		available_if_capitulated = yes
+		bypass = {
+			has_country_flag = ANZ_BYPASS_HISTORY_COMPROMISE
+		}
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.2 }
+			add_stability = 0.1
+			if = { limit = { communism > 0.5 } country_event = { id = Anzio.9 days = 0 } }
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#建立国家级慈善机构
+	focus = {
+		id = ANZ_establish_national_charity
+		icon = GFX_focus_ANZ_establish_national_charity
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_historic_compromise
+		available = { }
+		bypass = { }
+		prerequisite = { focus = ANZ_historic_compromise }
+		available_if_capitulated = yes
+		completion_reward = {
+			random_state = { 
+			limit = { is_core_of = ANZ is_controlled_by = ANZ }
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { is_core_of = ANZ is_controlled_by = ANZ }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#教会卫队
+	focus = {
+		id = ANZ_church_guardians
+		icon = GFX_focus_ANZ_church_guardians
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_establish_national_charity
+		available = { democratic > 0.6 }
+		bypass = { }
+		prerequisite = { focus = ANZ_establish_national_charity }
+		available_if_capitulated = yes
+		completion_reward = {
+			#解锁编制
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#安齐奥十字军
+	focus = {
+		id = ANZ_crusader
+		icon = GFX_focus_ANZ_crusader
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_church_guardians
+		available = { has_army_manpower = { size > 500000 } }
+		bypass = { }
+		prerequisite = { focus = ANZ_church_guardians }
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 731
+			add_state_claim = 184
+			add_state_claim = 797
+			add_state_claim = 341
+			create_wargoal = {
+				target = KEB
+				type = take_claimed_state
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#天主休憩之地
+	focus = {
+		id = ANZ_gods_resting_place
+		icon = GFX_focus_ANZ_gods_resting_place
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_crusader
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_crusader }
+		available_if_capitulated = yes
+		completion_reward = {
+			454 = { add_core_of = ANZ }
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#安齐奥社会运动
+	focus = {
+		id = ANZ_social_revolution
+		icon = GFX_focus_ANZ_social_revolution
+		x = 14
+		y = 0
+		cost = 10
+		#relative_position_id = ANZ_crusader
+		available = {  }
+		bypass = {  }
+		prerequisite = {  }
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ANZ_catholic_church }
+		completion_reward = {
+			#触发安丘比社会运动
+			country_event = { id = Anzio.4 days = 0 }
+			ANZ = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+					last_election = "1972.12.17"
+					election_frequency = 48
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#地中海规则
+	focus = {
+		id = ANZ_mediterranean_rules 
+		icon = GFX_focus_ANZ_mediterranean_rules
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_social_revolution
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_social_revolution }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			#解锁决议地中海代表大会
+			create_faction = "地中海规则"
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#加快军事改革
+	focus = {
+		id = ANZ_speed_up_military_reform 
+		icon = GFX_focus_ANZ_speed_up_military_reform
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_social_revolution
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_social_revolution }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+		        uses = 1
+		        category = land_doctrine
+		    }
+			army_experience = 20
+	   }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#拉拢青师团
+	focus = {
+		id = ANZ_approach_blue_division
+		icon = GFX_focus_ANZ_approach_blue_division
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_mediterranean_rules
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_mediterranean_rules }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			ANZ = {
+				add_opinion_modifier = {
+					target = BDH
+					modifier = ANZ_approach_blue_division
+				}
+			}
+			BDH = {
+				add_opinion_modifier = {
+					target = ANZ
+					modifier = ANZ_approach_blue_division
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#拉拢优格
+	focus = {
+		id = ANZ_approach_yogurt
+		icon = GFX_focus_ANZ_approach_yogurt
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_mediterranean_rules
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_mediterranean_rules }
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ANZ_declare_eastern_balkans }
+		completion_reward = {
+			ANZ = {
+				add_opinion_modifier = {
+					target = YOG
+					modifier = ANZ_approach_yogurt
+				}
+			}
+			YOG = {
+				add_opinion_modifier = {
+					target = ANZ
+					modifier = ANZ_approach_yogurt
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#移民政策
+	focus = {
+		id = ANZ_immigration_policy 
+		icon = GFX_focus_ANZ_immigration_policy
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_approach_yogurt
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_approach_yogurt focus = ANZ_approach_blue_division }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			unlock_decision_tooltip = anz_Immigrate_to_northern_italy
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#安齐奥的美味经济
+	focus = {
+		id = ANZ_delicious_economy
+		icon = GFX_focus_ANZ_delicious_economy
+		x = 9
+		y = 1
+		cost = 10
+		#relative_position_id = ANZ_approach_yogurt
+		available = {  }
+		bypass = {  }
+		#prerequisite = { focus = ANZ_approach_yogurt }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			random_state = {
+				limit = { is_core_of = KGA is_controlled_by = KGA }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#扩大意大利面出口
+	focus = {
+		id = ANZ_export_more_pasta
+		icon = GFX_focus_ANZ_export_more_pasta
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_delicious_economy
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_delicious_economy focus = ANZ_neo_renaissance }
+		prerequisite = { focus = ANZ_delicious_economy focus = ANZ_mediterranean_rules }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_ideas = ANZ_export_more_pasta
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#卡尔帕乔大饭店
+	focus = {
+		id = ANZ_carpaccio_restaurant
+		icon = GFX_focus_ANZ_carpaccio_restaurant
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_export_more_pasta
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_export_more_pasta }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				uses = 1
+				bonus = 0.75
+			}
+			random_state = {
+				limit = { is_core_of = ANZ is_controlled_by = ANZ }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { is_core_of = ANZ is_controlled_by = ANZ }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = senshado_school
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#配帕洛尼披萨厂
+	focus = {
+		id = ANZ_pepaloni_pizza_factory 
+		icon = GFX_focus_ANZ_pepaloni_pizza_factory
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_export_more_pasta
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_export_more_pasta }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				uses = 1
+				bonus = 0.75
+			}
+			random_state = { 
+				limit = { is_core_of = ANZ is_controlled_by = ANZ }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { is_core_of = ANZ is_controlled_by = ANZ }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = senshado_school
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#加快城市化
+	focus = {
+		id = ANZ_accelerate_urbanization
+		icon = GFX_focus_ANZ_accelerate_urbanization
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_pepaloni_pizza_factory
+		available = { has_idea = ANZ_urbanization_trend_enlarge_0 }
+		bypass = {  }
+		prerequisite = { focus = ANZ_pepaloni_pizza_factory focus = ANZ_carpaccio_restaurant }
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ANZ_decelerate_urbanization }
+		completion_reward = {
+			add_tech_bonus = {
+				category = concentrated_industry_category
+				uses = 2
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#解决住房问题
+	focus = {
+		id = ANZ_solve_housing_problems 
+		icon = GFX_focus_ANZ_solve_housing_problems
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_accelerate_urbanization
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_accelerate_urbanization }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = ANZ is_controlled_by = ANZ }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#劳资合作
+	focus = {
+		id = ANZ_labor_management_cooperation 
+		icon = GFX_focus_ANZ_labor_management_cooperation
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_solve_housing_problems
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_solve_housing_problems }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANZ_urbanization_trend_enlarge_0
+				add_idea = ANZ_urbanization_trend_enlarge_1
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+
+	#城市化减速
+	focus = {
+		id = ANZ_decelerate_urbanization
+		icon = GFX_focus_ANZ_decelerate_urbanization
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_pepaloni_pizza_factory
+		available = { NOT = { has_idea = ANZ_undeveloped_southern } }
+		bypass = {  }
+		prerequisite = { focus = ANZ_pepaloni_pizza_factory focus = ANZ_carpaccio_restaurant }
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ANZ_accelerate_urbanization }
+		completion_reward = {
+			add_tech_bonus = {
+				category = dispersed_industry_category
+				uses = 2
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#重农经济
+	focus = {
+		id = ANZ_agricultural_economy 
+		icon = GFX_focus_ANZ_agricultural_economy
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_decelerate_urbanization
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_decelerate_urbanization }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_ideas = ANZ_agricultural_economy
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#冷却北部物价
+	focus = {
+		id = ANZ_stabilize_northern_commodity_price 
+		icon = GFX_focus_ANZ_stabilize_northern_commodity_price
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_agricultural_economy
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_agricultural_economy }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			remove_ideas = ANZ_urbanization_trend
+			add_stability = 0.15
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#科研型企业
+	focus = {
+		id = ANZ_scientific_research_enterprise 
+		icon = GFX_focus_ANZ_scientific_research_enterprise
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_stabilize_northern_commodity_price
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_stabilize_northern_commodity_price focus = ANZ_labor_management_cooperation }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#坐上登山缆车！
+	focus = {
+		id = ANZ_ride_the_climbing_cable
+		icon = GFX_focus_ANZ_ride_the_climbing_cable
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_scientific_research_enterprise 
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_scientific_research_enterprise  }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			3 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+   
+	#延长防线至海岸
+	focus = {
+        id = ANZ_extend_defense_to_the_coast 
+		icon = GFX_focus_ANZ_extend_defense_to_the_coast
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_ride_the_climbing_cable
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_ride_the_climbing_cable  }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			3 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+			158 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#宣称东巴尔干
+	focus = {
+		id = ANZ_declare_eastern_balkans 
+		icon = GFX_focus_ANZ_decwlare_eastern_balkans
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_speed_up_military_reform
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_speed_up_military_reform }
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ANZ_approach_yogurt }
+		completion_reward = {
+			add_state_claim = 731
+			add_state_claim = 184
+			add_state_claim = 106
+			add_state_claim = 212
+			add_state_claim = 48
+			add_state_claim = 802
+			add_state_claim = 107
+			add_state_claim = 211
+			add_state_claim = 801
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#合理化南蒂罗尔
+	focus = {
+		id = ANZ_rationalize_south_tyrol 
+		icon = GFX_focus_ANZ_rationalize_south_tyrol
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_declare_eastern_balkans
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_declare_eastern_balkans focus = ANZ_approach_yogurt }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_state_core = 153
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#安齐奥民族阵线
+	focus = {
+		id = ANZ_national_front 
+		icon = GFX_focus_ANZ_national_front
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_rationalize_south_tyrol
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_rationalize_south_tyrol }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			set_party_name = { ideology = fascism long_name = "安齐奥民族阵线" name = "安齐奥民族阵线"  }
+			add_ideas = ANZ_national_front
+            hidden_effect = {
+				ANZ = { country_event = { id = Anzio.14 days = 40 random = 10 } }
+		    }
+	    }
+		ai_will_do = {
+			factor = 25   
+		}
+	}
+
+	#DUCE!DUCE!DUCE!
+	focus = {
+		id = ANZ_duce
+		icon = GFX_focus_ANZ_duce
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_national_front
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_national_front }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			#加强安丘比
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#重启职业工团制度
+	focus = {
+		id = ANZ_occupational_community_system
+		icon = GFX_focus_ANZ_occupational_community_system
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_national_front
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_national_front }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_ideas = ANZ_occupational_community_system_0
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#进一步控制工人动向
+	focus = {
+		id = ANZ_control_movement_of_workers
+		icon = GFX_focus_ANZ_control_movement_of_workers
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_occupational_community_system
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_occupational_community_system }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANZ_occupational_community_system_0
+				add_idea = ANZ_occupational_community_system_1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.2
+			}
+			add_stability = -0.05
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#投入研发战车
+	focus = {
+		id = ANZ_invest_tank_research
+		icon = GFX_focus_ANZ_invest_tank_research
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_speed_up_military_reform
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_speed_up_military_reform focus = ANZ_red_brigade }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				uses = 2
+				bonus = 0.75
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#弹药组装生产线
+	focus = {
+		id = ANZ_ammunition_assembly_line
+		icon = GFX_focus_ANZ_ammunition_assembly_line
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_invest_tank_research
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_invest_tank_research }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_tech_bonus = {
+				category = support_tech
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = artillery
+				uses = 1
+				bonus = 1
+			}
+
+			random_state = {
+				limit = { is_core_of = ANZ is_controlled_by = ANZ }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#第二个火热之秋
+	focus = {
+		id = ANZ_second_fiery_autumn
+		icon = GFX_focus_ANZ_second_fiery_autumn
+		x = 19
+		y = 0
+		cost = 10
+		#relative_position_id = ANZ_invest_tank_research
+		available = { has_country_flag = ANZ_SEC_FIREY_AUTUMN  }
+		bypass = {  }
+		#prerequisite = { focus = ANZ_invest_tank_research }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#红色旅
+	focus = {
+		id = ANZ_red_brigade
+		icon = GFX_focus_ANZ_red_brigade
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_second_fiery_autumn
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_second_fiery_autumn }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = support_tech
+				uses = 1
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#加大共产主义宣传
+	focus = {
+		id = ANZ_communism_education
+		icon = GFX_focus_ANZ_communism_education
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = ANZ_red_brigade
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_red_brigade }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#崭新的政治
+	focus = {
+		id = ANZ_new_politics
+		icon = GFX_focus_ANZ_new_politics
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_communism_education
+		available = {  communism > 0.4  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_communism_education }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			#共产主义上台
+			ANZ = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+					last_election = "1972.12.17"
+					election_frequency = 48
+				}
+			}
+			if = { limit = { democratic > 0.35 } country_event = { id = Anzio.13 days = 0 } }
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#颁布离婚法
+	focus = {
+		id = ANZ_divorce_law 
+		icon = GFX_focus_ANZ_divorce_law
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_new_politics
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_new_politics focus = ANZ_national_front }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			add_political_power = 200
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#教育与从业自由
+	focus = {
+		id = ANZ_social_ideological_liberation
+		icon = GFX_focus_ANZ_social_ideological_liberation
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ANZ_divorce_law
+		available = {  }
+		bypass = {  }
+		prerequisite = { focus = ANZ_divorce_law }
+		available_if_capitulated = yes
+		mutually_exclusive = {  }
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			random_state = {
+			limit = { is_core_of = ANZ is_controlled_by = ANZ }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = senshado_school
+				level = 2
+				instant_build = yes	
+			}
+			}
+            add_manpower = 40000
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+    #引进英式战车
+	focus = {
+		id = ANZ_introduce_british_equipments 
+		icon = GFX_focus_ANZ_introduce_british_equipments
+        x = 1
+		y = 1
+		cost = 10
+		available = {  }
+		bypass = {  }
+		relative_position_id = ANZ_establish_national_charity
+		prerequisite = { focus = ANZ_establish_national_charity }
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				uses = 1
+				bonus = 1
+			}
+			add_equipment_to_stockpile = {
+		        type = light_tank_equipment
+				amount = 500
+				producer = STG
+			}
+		} 
+	}
+}
