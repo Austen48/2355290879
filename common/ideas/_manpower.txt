@@ -89,7 +89,10 @@ ideas = {
 						#		ratio > 0.5
 						#	}
 						#}
-					}					
+					}
+					NOT = {
+						has_idea = ORL_conscroption
+					}				
 				}
 				has_war_support > 0.2
 				#Special rules AST in TFV
@@ -141,6 +144,9 @@ ideas = {
 						#	}
 						#}
 					}
+					NOT = {
+						has_idea = ORL_conscroption
+					}	
 				}
 				OR = {
 					has_war_support > 0.6
@@ -222,6 +228,9 @@ ideas = {
 				#		ratio > 0.75
 				#	}
 				#}
+				NOT = {
+					has_idea = ORL_conscroption
+				}	
 
 			}
 
@@ -262,6 +271,9 @@ ideas = {
 				#		ratio > 1
 				#	}
 				#}
+				NOT = {
+					has_idea = ORL_conscroption
+				}
 			}
 
 			ai_will_do = {

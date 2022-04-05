@@ -159,3 +159,33 @@ BKC = {
 	color = rgb { 212 212 212 }
 	color_ui = rgb { 212 212 212 }
 }
+
+ORL = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 100 149 237 }
+}
+
+B01 = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 100 149 237 }
+}
+
+B02 = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 100 149 237 }
+}
+
+BRE = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 100 149 237 }
+}
+
+AQU = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 100 149 237 }
+}
+
+VAT = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 100 149 237 }
+}
