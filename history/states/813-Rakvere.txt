@@ -4,13 +4,14 @@ state={
 	name="STATE_813"
 
 	history={
-		owner = BON
+		controller = BON
 		victory_points = {
 			4640 1 #Narva
 		}
 		victory_points = {
 			11127 1 #Rakvere
 		}
+		add_core_of = LCP
 		buildings = {
 			infrastructure = 3 #was: 5
 			4640 = {
@@ -19,8 +20,6 @@ state={
 			}
 
 		}
-		add_core_of = BON
-
 	}
 
 	provinces={

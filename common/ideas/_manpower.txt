@@ -92,7 +92,7 @@ ideas = {
 					}
 					NOT = {
 						has_idea = ORL_conscroption
-					}				
+					}					
 				}
 				has_war_support > 0.2
 				#Special rules AST in TFV
@@ -146,7 +146,7 @@ ideas = {
 					}
 					NOT = {
 						has_idea = ORL_conscroption
-					}	
+					}
 				}
 				OR = {
 					has_war_support > 0.6
@@ -230,7 +230,7 @@ ideas = {
 				#}
 				NOT = {
 					has_idea = ORL_conscroption
-				}	
+				}
 
 			}
 
