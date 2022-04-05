@@ -7,51 +7,100 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=moderatism
-			expire="1965.1.1.1"
+			ideology=conservatism
+			expire="2000.1.1.1"
 			id=-1
 		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=1071
+		}
 	}
-	SDS_marcus_williams={
-		name="Marcus Williams"
+	SDS_yoshinaga={
+		name="Yoshinaga"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_4"
+				large="gfx/leaders/GBT/Portrait_GBT_Yoshinaga.dds"
 			}
 		}
 		country_leader={
 			ideology=conservatism
-			traits={ armaments_organizer economist }
-			expire="1983.9.6.12"
+			expire="1974.1.1.1"
 			id=-1
 		}
 	}
-	SDS_jonas_roberts={
-		name="Jonas Roberts"
+	SDS_alisa={
+		name="Alisa"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_4"
+				large="gfx/leaders/SDS/Portrait_SDS_Alisa.dds"
 			}
 		}
-		country_leader={
-			ideology=anti_revisionism
-			traits={ economist }
-			expire="1987.9.6.12"
-			id=-1
+		visible = { NOT = { has_country_flag = SDS_ALISA_ESCAPE } }
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=1071
 		}
 	}
-	SDS_jonas_smith={
-		name="Jonas Smith"
+	SDS_yukari={
+		name="Yukari"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_5"
+				large="gfx/leaders/SDS/Portrait_SDS_Yukari.dds"
 			}
 		}
-		country_leader={
-			ideology=falangism
-			traits={ ideological_crusader reluctant_interventionist }
-			expire="1990.9.6.12"
-			id=-1
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=1074
+		}
+	}
+	SDS_naomi={
+		name="Naomi"
+		portraits={
+			civilian={
+				large="gfx/leaders/SDS/Portrait_SDS_Naomi.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=1073
+		}
+	}
+	SDS_helmet={
+		name="Helmet"
+		portraits={
+			civilian={
+				large="gfx/leaders/SDS/Portrait_SDS_Helmet.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=1075
 		}
 	}
 }

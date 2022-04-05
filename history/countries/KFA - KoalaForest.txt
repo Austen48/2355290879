@@ -1,25 +1,33 @@
 ﻿capital = 361
 
 set_technology = {
-	senshado_prototype_tank = 1
-	senshado_light_tank_1 = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_maintenance_company = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	gw_artillery = 1
+	early_fighter = 1
 }
-set_research_slots = 5
+set_research_slots = 4
 set_convoys = 20
-
+load_oob = KFA_1972
 set_politics = {
-	ruling_party = neutrality
-	last_election = "1933.3.5"
+	ruling_party = democratic
+	last_election = "1972.3.5"
 	election_frequency = 48
 	elections_allowed = no
 }
-set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
-}
-
 recruit_character = KFA_Wallaby
+set_popularities = {
+	democratic = 49
+	fascism = 6
+	communism = 22
+	neutrality = 23
+}
 
 
