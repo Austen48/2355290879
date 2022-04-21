@@ -130,3 +130,10 @@ opinion_modifiers = {
 		value = +25
 	}
 }
+
+#BON
+opinion_modifiers = {
+	BON_approach_VIG = {
+		value = +30
+	}
+}
