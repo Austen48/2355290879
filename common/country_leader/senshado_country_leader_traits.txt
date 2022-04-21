@@ -74,6 +74,21 @@ leader_traits = {
             factor = 1
         }
     }
+	#懒散的性格
+	JHS_mika_lazy = {
+		random = no
+		stability_factor = -0.2
+		war_support_factor = -0.2
+		conscription_factor = -0.04
+	}
+	#领航之风
+	JHS_mika_pilot_wind = {
+		random = no
+		stability_weekly = 0.1
+		war_support_factor = 0.2
+		political_power_factor = 0.3
+		conscription_factor = 0.02
+	}
 
 	#STG
 	#高调的模仿者
