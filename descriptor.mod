@@ -1,6 +1,8 @@
-version="v1.0"
+version="0.10.0"
+picture="thumbnail.png"
 tags={
-	"Fixes"
+	"Utilities"
 }
-name="GAP:RP"
-supported_version="1.11.9"
+name="Girls Und Panzer: RP"
+supported_version="1.11.11"
+remote_file_id="2355290879"

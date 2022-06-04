@@ -1,8 +1,6 @@
 senshado_decisions = {
 	debug_decryption_tech = {
-		visible = {
-			is_debug = yes is_ai = no
-		}
+		visible = { is_debug = yes is_ai = no }
 		days_remove = 1000
 		modifier = {
 			decryption = 10
@@ -10,21 +8,15 @@ senshado_decisions = {
 	}
 
 	debug_character_recurit = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		days_re_enable = 0
 		complete_effect = {
-			if = { limit = { OAN = { exists = no } } 
-				recruit_character = generic_mai
-			}
+			country_event = kuromorimine.38
 		}
 	}
 
 	debug_hyper_event_active = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		days_re_enable = 1
 		complete_effect = {
 			set_country_flag = open_hyper_event
@@ -33,9 +25,7 @@ senshado_decisions = {
 	}
 
 	debug_hyper_event_close = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		days_re_enable = 1
 		complete_effect = {
 			clr_country_flag = open_hyper_event
@@ -43,20 +33,17 @@ senshado_decisions = {
 	}
 
 	debug_free_300_ssdp_points = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		days_re_enable = 1
 		complete_effect = {
-			army_experience = 100
-			add_ssdp_300 = yes
+			set_politics = {
+				ruling_party = fascism
+			}
 		}
 	}
 
 	debug_clear_ssdp_points = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		days_re_enable = 1
 		complete_effect = {
 			
@@ -64,9 +51,7 @@ senshado_decisions = {
 	}
 	
 	debug_clear_affinity = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		days_re_enable = 1
 		complete_effect = {
 			clear_variable = affinity_1
@@ -76,18 +61,14 @@ senshado_decisions = {
 	}
 
 	debug_senshado_test = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		complete_effect = {
 			add_goods = yes
 		}
 	}
 
 	debug_add_senshado_school = {
-		visible = {
-			AND = { is_ai = no is_debug = yes }
-		}
+		visible = { is_ai = no is_debug = yes }
 		complete_effect = {
 			random_state = {
 				limit = { is_controlled_by = ROOT }
@@ -96,6 +77,104 @@ senshado_decisions = {
 					type = senshado_school
 					level = 1
 					instant_build = yes
+				}
+			}
+		}
+	}
+
+	debug_add_senshado_leader = {
+		visible = { is_ai = no is_debug = yes }
+		complete_effect = {
+			random_list = {
+				8 = {
+					if = { 
+						limit = { OR = { has_unit_leader = 1021 has_unit_leader = 1000 KGA = { exists = yes } } }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_miho
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				8 = {
+					if = { 
+						limit = { has_unit_leader = 1001 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_alice
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				10 = {
+					if = { 
+						limit = { has_unit_leader = 1002 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_yukari
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				10 = {
+					if = { 
+						limit = { OR = { has_unit_leader = 1003 has_unit_leader =1080 } }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_saori
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				10 = {
+					if = { 
+						limit = { has_unit_leader = 1004 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_hana
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				10 = {
+					if = { 
+						limit = { has_unit_leader = 1005 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_mako
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				10 = {
+					if = { 
+						limit = { has_unit_leader = 1028 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_azumi
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				10 = {
+					if = { 
+						limit = { has_unit_leader = 1029 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_megumi
+						hidden_effect = { country_event = senshado_events.2 }
+					}
+				}
+				10 = {
+					if = { 
+						limit = { has_unit_leader = 1030 }
+						hidden_effect = { country_event = senshado_events.3 }
+					}
+					else = {
+						recruit_character = generic_rumi
+						hidden_effect = { country_event = senshado_events.2 }
+					}
 				}
 			}
 		}
@@ -116,18 +195,18 @@ senshado_decisions = {
 		remove_effect = {
 			add_political_power = 100
 		}
+		ai_will_do = {
+			factor = 1
+		}
 	}
 
 	invest_gold_ore_mining = {
 		days_re_enable = 1
-		custom_cost_trigger = { check_variable = { gold > 39.9 } }
+		custom_cost_trigger = { industrial_complex > 3 }
 		custom_cost_text = generic_decision_tooltip_2
 		days_remove = 200
 		complete_effect = {
-			add_to_variable = {
-				var = gold
-				value = -40
-			}
+			
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -178,12 +257,17 @@ senshado_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				num_of_available_civilian_factories > 19
+				num_of_available_civilian_factories > 16
 				factor = 10
 			}
 			modifier = {
-				num_of_available_civilian_factories < 20
-				factor = 0.1
+				num_of_available_civilian_factories < 15
+				factor = 0
+			}
+			modifier = {
+				num_of_available_civilian_factories < 30
+				has_war = yes
+				factor = 0
 			}
 		}
 	}
