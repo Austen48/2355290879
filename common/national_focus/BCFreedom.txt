@@ -242,7 +242,7 @@ focus_tree = {
 	#全法兰西工业发展委员会
 	focus = {
 		id = BCF_industrial_development_committee
-		icon = GFX_focus_BCF_BCF_industrial_development_committee
+		icon = GFX_focus_BCF_industrial_development_committee
 		x = 0
 		y = 1
 		cost = 20
@@ -1182,10 +1182,9 @@ focus_tree = {
 			factor = 25
 		}
 		available = {
-			set_temp_variable = {
-				marie_support_require = 29
+			check_variable = {
+				bcf_andou_support > 29
 			}
-			checkUpdate_BCF_party_support = yes
 		}
 		relative_position_id = BCF_will_of_the_people
 		prerequisite = { focus = BCF_will_of_the_people }

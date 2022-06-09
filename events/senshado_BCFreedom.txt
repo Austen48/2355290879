@@ -2169,29 +2169,32 @@ country_event = {
 				}
 			}
 		}
+		OSH = {
+			transfer_state = 679
+			transfer_state = 678
+			transfer_state = 292
+			transfer_state = 658
+			transfer_state = 765
+		}
+		ASU = {
+			transfer_state = 670
+			transfer_state = 671
+			transfer_state = 289
+			transfer_state = 286
+			transfer_state = 741
+		}
+		OTU = {
+			transfer_state = 694
+			transfer_state = 687
+			transfer_state = 310
+			transfer_state = 309
+		}
 		B01 = {
 				set_country_flag = BCF_civil_war_lorder
 				transfer_state = 785
 				transfer_state = 16
 				transfer_state = 18
 				transfer_state = 29
-				transfer_state = 458
-				transfer_state = 459
-				transfer_state = 460
-				transfer_state = 309
-				transfer_state = 310
-				transfer_state = 687
-				transfer_state = 679
-				transfer_state = 678
-				transfer_state = 292
-				transfer_state = 658
-				transfer_state = 765
-				transfer_state = 670
-				transfer_state = 671
-				transfer_state = 289
-				transfer_state = 286
-				transfer_state = 741
-				transfer_state = 694
 				hidden_effect = {
 					recruit_character = BCF_andou
 					retire_ideology_leader = fascism

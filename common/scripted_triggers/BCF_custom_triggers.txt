@@ -1,9 +1,0 @@
-checkUpdate_BCF_party_support = {
-	custom_trigger_tooltip = {
-		tooltip = Check_if_marie_support_met_require
-		check_variable = {
-			bcf_marie_support > marie_support_require
-		}
-	}
-
-}
