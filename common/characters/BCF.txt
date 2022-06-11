@@ -559,4 +559,75 @@ characters = {
 			expire = "2000.1.1.1"
 			id = -1
 		}
+	}
+	BCF_Richelieu = {
+        name = "Richelieu"
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/BCF/Portrait_BCF_Richelieu.dds"
+            }
+        }
+        navy_leader={
+            visible = {  }
+            traits={ naval_lineage gunnery_expert media_personality }
+            skill=3
+            attack_skill=3
+            defense_skill=3
+            maneuvering_skill=1
+            coordination_skill=3
+            legacy_id=0
+        }
+        advisor = {
+            slot = navy_chief
+            idea_token = BCF_Richelieu
+            removal_cost = 0
+            available = {  }
+            allowed = {
+                original_tag = BCF
+            }
+            visible = {  }
+            traits = { navy_chief_reform_2 }
+            on_add = {}
+            on_remove = {}
+            cost = 100
+            ai_will_do = {
+                factor = 1.000
+            }
+        }
+    }
+    BCF_Teste = {
+        name = "Teste"
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/BCF/Portrait_BCF_Teste.dds"
+            }
+        }
+        navy_leader={
+            visible = {  }
+            traits={ aviation_enthusiast gentlemanly media_personality }
+            skill=3
+            attack_skill=3
+            defense_skill=3
+            maneuvering_skill=1
+            coordination_skill=3
+            legacy_id=0
+        }
+        advisor = {
+            slot = navy_chief
+            idea_token = BCF_Teste
+            removal_cost = 0
+            available = {  }
+            allowed = {
+                original_tag = BCF
+            }
+            visible = {  }
+            traits = { navy_carrier_2 }
+            on_add = {}
+            on_remove = {}
+            cost = 100
+            ai_will_do = {
+                factor = 1.000
+            }
+        }
+    }
 }
