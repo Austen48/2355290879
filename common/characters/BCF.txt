@@ -4,6 +4,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/BCF/Portrait_BCF_Andou.dds"
+				small="gfx/interface/advisors/idea_andou.dds"
 			}
 		}
 		country_leader = {
@@ -108,6 +109,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/BCF/Portrait_BCF_Marie.dds"
+				small="gfx/interface/advisors/idea_marie.dds"
 			}
 		}
 		country_leader = {
@@ -202,6 +204,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/BCF/Portrait_BCF_Oshida.dds"
+				small="gfx/interface/advisors/idea_oshida.dds"
 			}
 		}
 		country_leader = {
@@ -295,31 +298,12 @@ characters = {
 			legacy_id = 1043
 		}
 	}
-	BCF_azumi = {
-		name = "Azumi"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/BCF/Portrait_BCF_Azumi.dds"
-			}
-		}
-		corps_commander = {
-			traits = {
-				armor_officer
-				career_officer
-			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 1
-			legacy_id = 1041
-		}
-	}
 	BCF_asparagus = {
 		name = "Asparagus"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/BCF/Portrait_BCF_asparagus.dds"
+				large = "gfx/leaders/BCF/Portrait_BCF_Asparagus.dds"
+				small="gfx/interface/advisors/idea_asparagus.dds"
 			}
 		}
 		country_leader = {
@@ -377,7 +361,8 @@ characters = {
 		name = "Bordeaux"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/BCF/Portrait_BCF_bordeaux.dds"
+				large = "gfx/leaders/BCF/Portrait_BCF_Bordeaux.dds"
+				small="gfx/interface/advisors/idea_bordeaux.dds"
 			}
 		}
 		country_leader = {
@@ -414,11 +399,12 @@ characters = {
 			legacy_id = 1090
 		}
 	}
-	BCF_Moule = {
+	BCF_moule = {
 		name = "Moule"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/BCF/Portrait_BCF_Moule.dds"
+				small="gfx/interface/advisors/idea_moule.dds"
 			}
 		}
 		advisor = {
@@ -460,7 +446,8 @@ characters = {
 		name = "Isabe"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/BCF/Portrait_BCF_isabe.dds"
+				large = "gfx/leaders/BCF/Portrait_BCF_Isabe.dds"
+				small="gfx/interface/advisors/idea_isabe.dds"
 			}
 		}
 		advisor = {
@@ -496,7 +483,8 @@ characters = {
 		name = "Sofue"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/BCF/Portrait_BCF_sofue.dds"
+				large = "gfx/leaders/BCF/Portrait_BCF_Sofue.dds"
+				small="gfx/interface/advisors/idea_sofue.dds"
 			}
 		}
 		advisor = {
@@ -560,11 +548,12 @@ characters = {
 			id = -1
 		}
 	}
-	BCF_Richelieu = {
+	BCF_richelieu = {
         name = "Richelieu"
         portraits = {
             civilian = {
                 large = "gfx/leaders/BCF/Portrait_BCF_Richelieu.dds"
+				small="gfx/interface/advisors/idea_richelieu.dds"
             }
         }
         navy_leader={
@@ -579,7 +568,7 @@ characters = {
         }
         advisor = {
             slot = navy_chief
-            idea_token = BCF_Richelieu
+            idea_token = BCF_richelieu
             removal_cost = 0
             available = {  }
             allowed = {
@@ -595,11 +584,12 @@ characters = {
             }
         }
     }
-    BCF_Teste = {
+    BCF_teste = {
         name = "Teste"
         portraits = {
             civilian = {
                 large = "gfx/leaders/BCF/Portrait_BCF_Teste.dds"
+				small="gfx/interface/advisors/idea_teste.dds"
             }
         }
         navy_leader={
@@ -614,7 +604,7 @@ characters = {
         }
         advisor = {
             slot = navy_chief
-            idea_token = BCF_Teste
+            idea_token = BCF_teste
             removal_cost = 0
             available = {  }
             allowed = {
