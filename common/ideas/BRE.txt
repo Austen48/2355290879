@@ -183,7 +183,7 @@ ideas = {
 				defense_bonus_against = 0.25
 			}
 		}
-		#统一的大不列颠尼亚
+		#统一大不列颠尼亚
 		BRE_united_great_britannia = {
 			allowed = {
 				tag = BRE
