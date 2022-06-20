@@ -184,9 +184,9 @@ equipments = {
 
 	}
 
-	light_tank_chassis_0 = { #also great war tank
-		abbreviation = "lt0"
-		derived_variant_name = light_tank_equipment_0
+	light_tank_chassis_1 = { #also great war tank
+		abbreviation = "lt1"
+		derived_variant_name = light_tank_equipment_1
 		visual_level = 0
 		year = 1965
 		archetype = light_tank_chassis
@@ -199,13 +199,13 @@ equipments = {
 		}
 	}
 
-	light_tank_chassis_1 = {
-		abbreviation = "lt1"
-		derived_variant_name = light_tank_equipment_1
+	light_tank_chassis_2 = {
+		abbreviation = "lt2"
+		derived_variant_name = light_tank_equipment_2
 		visual_level = 0
 		year = 1970
 		archetype = light_tank_chassis
-		parent = light_tank_chassis_0
+		parent = light_tank_chassis_1
 		priority = 2000
 		module_slots = inherit
 		maximum_speed = 4
@@ -217,23 +217,6 @@ equipments = {
 		}
 	}
 
-	light_tank_chassis_2 = {
-		abbreviation = "lt2"
-		derived_variant_name = light_tank_equipment_2
-		visual_level = 1
-		year = 1972
-		archetype = light_tank_chassis
-		parent = light_tank_chassis_1
-		priority = 2000
-		module_slots = inherit
-		build_cost_ic = 1.5
-		maximum_speed = 4
-		reliability = 1.1
-		armor_value = 15
-		resources = {
-			steel = 1
-		}
-	}
 
 	light_tank_chassis_3 = {
 		abbreviation = "lt3"

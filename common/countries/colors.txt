@@ -39,6 +39,10 @@ STG = {
 	color = rgb { 2 97 71 }
 	color_ui = rgb { 2 97 71 }
 }
+S01 = {
+	color = rgb { 2 97 71 }
+	color_ui = rgb { 2 97 71 }
+}
 
 CHT = {
 	color = rgb { 255 150 51 }
